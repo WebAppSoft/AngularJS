@@ -27,8 +27,7 @@ export class AuthService {
   signup(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=" +
-          environment.firebaseAPIKey,
+        "https://forumapi.azurewebsites.net/users/login",
         {
           email: email,
           password: password,
