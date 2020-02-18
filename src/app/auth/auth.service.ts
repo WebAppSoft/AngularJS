@@ -30,8 +30,7 @@ export class AuthService {
         "https://forumapi.azurewebsites.net/users/login",
         {
           email: email,
-          password: password,
-          returnSecureToken: true
+          password: password
         }
       )
       .pipe(
@@ -50,11 +49,10 @@ export class AuthService {
   login(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=",
+        "https://forumapi.azurewebsites.net/users/login",
         {
           email: email,
-          password: password,
-          returnSecureToken: true
+          password: password
         }
       )
       .pipe(
